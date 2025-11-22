@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yossakorn.Dev - Portfolio</title>
+    <meta name="description" content="Portfolio of Yossakorn Hemhomwong, Electronics and Computer Systems Engineer.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <div class="logo" onclick="scrollToSection('home')">
+                <span class="text-blue">Yossakorn</span><span class="text-dark">.Dev</span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="desktop-menu">
+                <button onclick="scrollToSection('home')" class="nav-link active" data-section="home">Home</button>
+                <button onclick="scrollToSection('about')" class="nav-link" data-section="about">About</button>
+                <button onclick="scrollToSection('experience')" class="nav-link"
+                    data-section="experience">Experience</button>
+                <button onclick="scrollToSection('education')" class="nav-link"
+                    data-section="education">Education</button>
+                <button onclick="scrollToSection('skills')" class="nav-link" data-section="skills">Skills</button>
+                <button onclick="scrollToSection('contact')" class="nav-link" data-section="contact">Contact</button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu-btn">
+                <button id="menu-toggle" aria-label="Toggle menu">
+                    <i data-lucide="menu" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <button onclick="scrollToSection('home')" class="mobile-nav-link">Home</button>
+            <button onclick="scrollToSection('about')" class="mobile-nav-link">About</button>
+            <button onclick="scrollToSection('experience')" class="mobile-nav-link">Experience</button>
+            <button onclick="scrollToSection('education')" class="mobile-nav-link">Education</button>
+            <button onclick="scrollToSection('skills')" class="mobile-nav-link">Skills</button>
+            <button onclick="scrollToSection('contact')" class="mobile-nav-link">Contact</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge">Available for Work</div>
+                <h1>สวัสดีครับ, ผม <span class="text-gradient">ยศกร</span></h1>
+                <h2>วิศวกรรมอิเล็กทรอนิกส์และระบบคอมพิวเตอร์</h2>
+                <p>มุ่งเน้นการดูแลระบบ สนับสนุนผู้ใช้งาน และพัฒนาโซลูชันด้วย Python, C++ และ SQL</p>
+                <div class="hero-buttons">
+                    <button onclick="scrollToSection('contact')" class="btn btn-primary">
+                        <i data-lucide="mail"></i> ติดต่อผม
+                    </button>
+                    <button onclick="scrollToSection('about')" class="btn btn-outline">
+                        เรียนรู้เพิ่มเติม
+                    </button>
+                </div>
+            </div>
+
+            <div class="hero-image-wrapper">
+                <div class="hero-image-container">
+                    <div class="glow-effect"></div>
+                    <div class="profile-image-frame">
+                        <img src="IMG_20251106_233427.jpg" alt="Yossakorn Profile" class="profile-image">
+                    </div>
+
+                    <!-- Floating Icons -->
+                    <div class="floating-icon icon-cpu">
+                        <i data-lucide="cpu"></i>
+                    </div>
+                    <div class="floating-icon icon-code">
+                        <i data-lucide="code"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-down">
+            <i data-lucide="chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section bg-white">
+        <div class="container">
+            <div class="section-header">
+                <h2>เกี่ยวกับฉัน</h2>
+                <div class="underline"></div>
+            </div>
+
+            <div class="card about-card">
+                <div class="about-content">
+                    <h3 class="card-title"><i data-lucide="user" class="text-blue"></i> ข้อมูลส่วนตัว</h3>
+                    <div class="info-grid">
+                        <div class="info-item"><span class="label">ชื่อ:</span> ยศกร เหมหอมวงษ์ (กานต์)</div>
+                        <div class="info-item"><span class="label">อายุ:</span> 24 ปี</div>
+                        <div class="info-item"><span class="label">สัญชาติ:</span> ไทย</div>
+                        <div class="info-item"><span class="label">สถานะทางทหาร:</span> ผ่านการเกณฑ์ทหารแล้ว</div>
+                    </div>
+
+                    <h3 class="card-title mt-6"><i data-lucide="briefcase" class="text-blue"></i> สรุปย่อ</h3>
+                    <p class="summary-text">
+                        ผมมีพื้นฐานด้านเทคนิคที่หลากหลาย ทั้งระบบเครือข่าย (Network), การเขียนโปรแกรม (C++, Python, SQL)
+                        และการพัฒนาเว็บ
+                        มีประสบการณ์ตรงจากการฝึกงานที่ NT
+                        และประสบการณ์ด้านการบริการลูกค้าพร้อมการแก้ไขปัญหาเชิงเทคนิคจาก Samsung
+                        ผมมุ่งเน้นการดูแลระบบและสนับสนุนผู้ใช้งานอย่างมีประสิทธิภาพ พร้อมเรียนรู้เทคโนโลยีใหม่ๆ เสมอ
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section bg-slate-50">
+        <div class="container">
+            <div class="section-header">
+                <h2>ประสบการณ์ทำงาน</h2>
+                <div class="underline"></div>
+            </div>
+
+            <div class="experience-list">
+                <!-- Experience Card 1 -->
+                <div class="card experience-card border-blue">
+                    <div class="card-header">
+                        <div>
+                            <h3>Technical Support & Customer Service</h3>
+                            <div class="company-name text-blue">Samsung</div>
+                        </div>
+                        <div class="badge-outline text-blue">Work Experience</div>
+                    </div>
+                    <ul class="list-disc">
+                        <li>ให้บริการลูกค้าและแก้ไขปัญหาเชิงเทคนิคเกี่ยวกับผลิตภัณฑ์</li>
+                        <li>วิเคราะห์และวินิจฉัยอาการเสียของอุปกรณ์เบื้องต้น</li>
+                        <li>ประสานงานและให้คำแนะนำการใช้งานแก่ผู้ใช้</li>
+                    </ul>
+                </div>
+
+                <!-- Experience Card 2 -->
+                <div class="card experience-card border-indigo">
+                    <div class="card-header">
+                        <div>
+                            <h3>Internship Program</h3>
+                            <div class="company-name text-indigo">NT (National Telecom Public Company Limited)</div>
+                        </div>
+                        <div class="badge-outline text-indigo">Internship</div>
+                    </div>
+                    <ul class="list-disc">
+                        <li>เรียนรู้และปฏิบัติงานด้านระบบเครือข่ายและโทรคมนาคม</li>
+                        <li>ศึกษาโครงสร้างพื้นฐานของระบบอินเทอร์เน็ตองค์กร</li>
+                        <li>สนับสนุนการทำงานของทีมวิศวกร</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section bg-white">
+        <div class="container">
+            <div class="section-header">
+                <h2>การศึกษา</h2>
+                <div class="underline"></div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-line"></div>
+
+                <!-- Education Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-content left text-right">
+                        <h3>มหาวิทยาลัยศิลปากร</h3>
+                        <p class="text-blue font-medium">วิศวกรรมอิเล็กทรอนิกส์และระบบคอมพิวเตอร์</p>
+                        <p class="text-slate-light text-sm">อุดมศึกษา</p>
+                    </div>
+                    <div class="timeline-dot bg-blue">
+                        <i data-lucide="graduation-cap" class="text-white icon-sm"></i>
+                    </div>
+                    <div class="timeline-content right"></div>
+                </div>
+
+                <!-- Education Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-content left"></div>
+                    <div class="timeline-dot bg-indigo">
+                        <div class="dot-inner"></div>
+                    </div>
+                    <div class="timeline-content right">
+                        <h3>โรงเรียนพรหมานุสรณ์</h3>
+                        <p class="text-slate">มัธยมศึกษาตอนปลาย</p>
+                    </div>
+                </div>
+
+                <!-- Education Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-content left text-right">
+                        <h3>โรงเรียนพรหมานุสรณ์</h3>
+                        <p class="text-slate">มัธยมศึกษาตอนต้น</p>
+                    </div>
+                    <div class="timeline-dot bg-slate-400">
+                        <div class="dot-inner"></div>
+                    </div>
+                    <div class="timeline-content right"></div>
+                </div>
+
+                <!-- Education Item 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-content left"></div>
+                    <div class="timeline-dot bg-slate-300">
+                        <div class="dot-inner"></div>
+                    </div>
+                    <div class="timeline-content right">
+                        <h3>โรงเรียนวัดแก่นเหล็กฯ</h3>
+                        <p class="text-slate">ประถมศึกษา</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-dark text-white">
+        <div class="container">
+            <div class="section-header">
+                <h2>ทักษะและความสามารถ</h2>
+                <div class="underline"></div>
+                <p class="text-slate-400 mt-2">เครื่องมือและเทคโนโลยีที่ผมใช้งานได้คล่องแคล่ว</p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Programming -->
+                <div class="skill-card">
+                    <div class="skill-icon-wrapper bg-blue-soft text-blue-light">
+                        <i data-lucide="code"></i>
+                    </div>
+                    <h3>Programming</h3>
+                    <div class="tags">
+                        <span class="tag tag-blue">C++</span>
+                        <span class="tag tag-blue">Python</span>
+                        <span class="tag tag-blue">SQL</span>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="skill-card">
+                    <div class="skill-icon-wrapper bg-green-soft text-green-light">
+                        <i data-lucide="monitor"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <div class="tags">
+                        <span class="tag tag-green">HTML & CSS</span>
+                        <span class="tag tag-green">JavaScript</span>
+                        <span class="tag tag-green">Web Design</span>
+                    </div>
+                </div>
+
+                <!-- Hardware & Systems -->
+                <div class="skill-card">
+                    <div class="skill-icon-wrapper bg-purple-soft text-purple-light">
+                        <i data-lucide="server"></i>
+                    </div>
+                    <h3>Hardware & Systems</h3>
+                    <div class="tags">
+                        <span class="tag tag-purple">Computer Troubleshooting</span>
+                        <span class="tag tag-purple">System Maintenance</span>
+                        <span class="tag tag-purple">Hardware Diagnostics</span>
+                        <span class="tag tag-purple">Network Basics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-white">
+        <div class="container">
+            <div class="section-header">
+                <h2>ติดต่อผม</h2>
+                <div class="underline"></div>
+                <p class="text-slate-500 mt-2">สนใจร่วมงานหรือสอบถามข้อมูลเพิ่มเติม สามารถติดต่อได้ตามช่องทางด้านล่าง
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="card contact-info-card">
+                    <h3 class="card-title mb-6">ข้อมูลการติดต่อ</h3>
+                    <div class="contact-list">
+                        <a href="tel:0851070060" class="contact-item">
+                            <div class="contact-icon"><i data-lucide="phone"></i></div>
+                            <div>
+                                <p class="label-sm">เบอร์โทรศัพท์</p>
+                                <p class="value">085-107-0060</p>
+                            </div>
+                        </a>
+                        <a href="mailto:yossakorn1234567@gmail.com" class="contact-item">
+                            <div class="contact-icon"><i data-lucide="mail"></i></div>
+                            <div>
+                                <p class="label-sm">อีเมล</p>
+                                <p class="value">yossakorn1234567@gmail.com</p>
+                            </div>
+                        </a>
+                        <a href="#" class="contact-item">
+                            <div class="contact-icon"><i data-lucide="facebook"></i></div>
+                            <div>
+                                <p class="label-sm">Facebook</p>
+                                <p class="value">Yossakorn Karn</p>
+                            </div>
+                        </a>
+                        <a href="#" class="contact-item">
+                            <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+                            <div>
+                                <p class="label-sm">ที่อยู่</p>
+                                <p class="value">ต.ไร่ส้ม อ.เมือง จ.เพชรบุรี 76000</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card contact-cta-card">
+                    <h3>พร้อมเริ่มงานทันที!</h3>
+                    <p>ผมมีความกระตือรือร้นและพร้อมที่จะเรียนรู้สิ่งใหม่ๆ
+                        หากคุณกำลังมองหาบุคลากรที่มีความมุ่งมั่นและทักษะหลากหลาย อย่าลังเลที่จะติดต่อผมครับ</p>
+                    <button onclick="window.location.href='mailto:yossakorn1234567@gmail.com'" class="btn btn-white">
+                        ส่งอีเมลหาผม
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2024 Yossakorn Hemhomwong. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#"><i data-lucide="facebook"></i></a>
+                <a href="mailto:yossakorn1234567@gmail.com"><i data-lucide="mail"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
